@@ -1,0 +1,12 @@
+{
+  "cnpj": "CNPJ",
+  "chave": "raiz",
+  "colunas": {
+    "no_segmento": "No Segmento",
+    "enriquecida": "Enriquecida",
+    "canal_corporativo": "Tem Canal Corporativo",
+    "priorizada": "Priorizada",
+    "abordada": "Abordada",
+    "oportunidade_aberta": "Oportunidade Aberta"
+  }
+}

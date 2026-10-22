@@ -55,7 +55,7 @@ Cada requisito segue o formato ação · critério de sucesso · condição de i
 | ID | Requisito | Critério de sucesso | Condição de início |
 |---|---|---|---|
 | R1 | Chave única por CNPJ raiz; importações idempotentes | Reimportar a mesma base não cria duplicatas | Imediata |
-| R2 | Separar contagens (registros, CNPJs únicos, válidos, no segmento, enriquecidos, priorizados, abordados, oportunidades) — regra 7.4 | Painel mostra as 8 contagens distintas | Imediata |
+| R2 | Separar as 10 contagens da regra 7.4 (registros, entidades únicas, duplicados, válidos, no segmento, enriquecidas, com canal corporativo, priorizadas, abordadas, oportunidades abertas) | Relatório mostra as 10 contagens distintas | Imediata — script em `experiments/cockpit-base-counts/` |
 | R3 | Score por regras com fatores exibidos | Cada posição na fila lista os fatores que a justificam | Após R1 |
 | R4 | Cadência com próximo passo e data | Toda empresa abordada tem próximo passo ou motivo de encerramento | Após R1 |
 | R5 | Timeline de atividades por empresa | Histórico preservado na promoção prospect → carteira | Após R4 |
@@ -80,7 +80,7 @@ Riscos: (a) o teardown vem de conhecimento do produto, não de verificação nes
 
 ## 8. Próximo teste
 
-Aplicar R1 e R2 a uma base real do Cockpit (em ambiente permitido), medir duplicatas e as 8 contagens, e só então decidir R3–R7. Revisão sugerida: após o primeiro uso recorrente.
+Aplicar R1 e R2 a uma base real do Cockpit (em ambiente permitido), medir duplicatas e as 10 contagens com `experiments/cockpit-base-counts/contagens_base.py`, e só então decidir R3–R7. Revisão sugerida: após o primeiro uso recorrente.
 
 ## 9. Lacunas
 
